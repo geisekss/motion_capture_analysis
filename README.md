@@ -1,4 +1,4 @@
-# Source code for _"A multi-sensor and cross-session human gait dataset captured through an optical system and inertial measurement units"_
+# Source code for _"A multi-sensor human gait dataset captured through an optical system and inertial measurement units"_
 
 * The setup adopted to the motion capture system Qualisys, with 18 infra-red cameras, is presented in the picture `setup.png`
 
@@ -8,7 +8,7 @@
 
 * The integration API, used to synchronize data from the Qualisys system and the ESP8266, is located in the `integration_API` folder.
 
-* The source code to perform the data processing, described in the paper _"A multi-sensor and cross-session human gait dataset captured through an optical system and inertial measurement units"_, is located in the `data_analysis` folder.
+* The source code to perform the data processing, described in the paper _"{A multi-sensor human gait dataset captured through an optical system and inertial measurement units"_, is located in the `data_analysis` folder.
 
 	* First, it is necessary to run the Matlab code `data_analysis\extract_walkSection_trajectories.matlab` to extract the walking sections from the trajectories, and store the first and last frames of these sections.
 
