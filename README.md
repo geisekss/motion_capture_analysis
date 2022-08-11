@@ -18,6 +18,7 @@
 
 	```matlab
 	load mcdemodata
+	user = "user01";
 	folder = 'processed_data/';
 	files_qtm = dir(strcat(folder, user, '/*_qtm_walk.mat'));
 	for i=1:length(files_qtm)
