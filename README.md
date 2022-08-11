@@ -14,3 +14,15 @@
 
 	* Through these first and last frames stored by the previous code, it is possible to run the Python code `data_analysis\extract_walkSection_accelerations.py` to extract the walking sections from the accelerations.  
 
+	* Processed data (folder `processed_data`) can be loaded using Mocap Toolbox by downloading it in the [official website](https://www.jyu.fi/hytk/fi/laitokset/mutku/en/research/materials/mocaptoolbox), and executing the following sample code (remember to include the Mocap Toolbox folder and its subfolders in Matlab path):
+
+	```matlab
+	load mcdemodata
+	folder = 'processed_data/';
+	files_qtm = dir(strcat(folder, user, '/*_qtm_walk.mat'));
+	for i=1:length(files_qtm)
+		capture_name = files_qtm(i).name
+		capture_data = load(strcat(files_qtm(i).folder, '/', capture_name));
+		capture_name = fieldnames(capture_data);	
+		markers = capture_data.(capture_name{1}).markerName;
+	```
